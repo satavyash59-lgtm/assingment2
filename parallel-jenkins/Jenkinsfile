@@ -1,19 +1,11 @@
+@library('my-shared-library') _
+
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
-                sh 'echo Running tests'
-            }
-        }
-        stage('Approve') {
-            steps {
-                input message: 'Tests passed. Deploy to production?'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'echo Deploying to production'
+                scho 'Building'
             }
         }
     }
