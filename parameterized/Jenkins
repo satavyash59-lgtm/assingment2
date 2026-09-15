@@ -1,0 +1,14 @@
+stage('Tests') {  
+  parallel {
+    stage ('Unit') {
+      steps {
+            sh 'echo running unit tests'
+        }
+    }
+    stage('Integraion'){
+       steps {
+           sh 'echo running integration tests'
+       }
+    }
+  }
+}
