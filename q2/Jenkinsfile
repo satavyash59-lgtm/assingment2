@@ -1,5 +1,7 @@
 pipeline{
-  stage('Test'){
+  stages{
+ 
+    stage('Test'){
     when {
       branch 'Main'
     }
@@ -7,4 +9,5 @@ pipeline{
        sh 'echo Running tests'
      }
   }
+}
 }
