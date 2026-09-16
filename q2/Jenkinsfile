@@ -1,0 +1,10 @@
+pipeline{
+  stage('Test'){
+    when {
+      branchName 'Main'
+    }
+     steps{
+       sh 'echo Running tests'
+     }
+  }
+}
